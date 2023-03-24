@@ -251,6 +251,7 @@ console.log('======================================')
 let fujiProfit = fujiPounds * fujiPrice;// this will take the total pounds and multiply buy the price to find the price of each type
 let galaProfit = galaPounds * galaPrice;
 let pinkProfit = pinkPounds * pinkPrice;
+pinkProfit = pinkProfit.toFixed(0);
 /*console.log(fujiPrice)
 console.log(galaPrice)
 console.log(pinkPrice)*/
