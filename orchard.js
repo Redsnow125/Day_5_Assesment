@@ -58,18 +58,15 @@ let pinkCount = 0;
 let totalAcres = 0;
 
 // I cound the apples using a for loop to count up while adding to the counter of each type
-for(i = 0; i < 7; i++){
+
     for (i = 0; i < fujiAcres.length; i++){
-        fujiCount += fujiAcres[i]; // Counting line
-    }
-    for (i = 0; i < galaAcres.length; i++){
+        fujiCount += fujiAcres[i]; // Counting 
         galaCount += galaAcres[i];
-    }
-    for (i = 0; i < pinkAcres.length; i++){
         pinkCount += pinkAcres[i];
     }
+
     totalAcres = fujiCount + galaCount + pinkCount;
-}
+
 /*console.log("The Fuji count is " + fujiCount)
 console.log("The Gala count is " + galaCount)
 console.log("The Pink count is " + pinkCount)*/
@@ -167,18 +164,14 @@ console.log('======================================')
 let fujiTons = [];
 let galaTons = [];
 let pinkTons = [];
-for (i = 0; i < 7; i++){
+
     for (i = 0; i < fujiAcres.length; i++){ // we run this for the length of the array
             fujiTons.push(fujiAcres[i] * 6.5)// here we ar taking the number of acres and multiplying it by how much is in each acre
-    }
-    for (i = 0; i < galaAcres.length; i++){
-        galaTons.push(galaAcres[i] * 6.5)
-    }
-    for (i = 0; i < galaAcres.length; i++){
-        pinkTons.push(galaAcres[i] * 6.5)
-    }
-    
+            galaTons.push(galaAcres[i] * 6.5)
+            pinkTons.push(pinkAcres[i] * 6.5)
 }
+    
+
 console.log(fujiTons)
 console.log(galaTons)
 console.log(pinkTons)
@@ -210,20 +203,17 @@ let fujiPounds = 0;
 let galaPounds = 0;
 let pinkPounds = 0;
 
-for(i = 0; i < 7; i++){
+
     for (i = 0; i < fujiTons.length; i++){// this runs for the length of tons we defined in problem 4
         fujiPounds += fujiTons[i]; // this will add all the array intergers into one number
-    }
-    for (i = 0; i < galaTons.length; i++){
         galaPounds += galaTons[i];
-    }
-    for (i = 0; i < pinkTons.length; i++){
         pinkPounds += pinkTons[i];
     }
-    fujiPounds = fujiPounds * 2000; // this is taking the total tonnage and converting to pounds
-    galaPounds = galaPounds * 2000;
-    pinkPounds = pinkPounds * 2000;
-}
+
+    fujiPounds *= 2000; // this is taking the total tonnage and converting to pounds
+    galaPounds *= 2000;
+    pinkPounds *= 2000;
+
 console.log(`There are ${fujiPounds} Fuji pounds`)
 console.log(`There are ${galaPounds} Gala pounds`)
 console.log(`There are ${pinkPounds} Pink pounds`)
@@ -251,7 +241,6 @@ console.log('======================================')
 let fujiProfit = fujiPounds * fujiPrice;// this will take the total pounds and multiply buy the price to find the price of each type
 let galaProfit = galaPounds * galaPrice;
 let pinkProfit = pinkPounds * pinkPrice;
-pinkProfit = pinkProfit.toFixed(0);
 /*console.log(fujiPrice)
 console.log(galaPrice)
 console.log(pinkPrice)*/
